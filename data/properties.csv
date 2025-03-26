@@ -1,0 +1,11 @@
+property_id,name,location,amenities,status,price,available_months,number_of_bedrooms,number_of_bathrooms,square_meters,property_type,max_guests,pet_friendly,check_in_time,check_out_time,minimum_stay,cleaning_fee,security_deposit
+101,Cozy Studio,Barcelona,"wifi,kitchen,AC,terrace",available,120,"June,July,August",1,1,45,studio,2,no,15:00,11:00,2,25,200
+102,Modern Loft,Berlin,"wifi,balcony,heating,workspace",booked,150,"May,June",2,2,85,loft,4,yes,14:00,10:00,3,35,300
+103,Beachfront Villa,Mallorca,"wifi,pool,BBQ,beach access",available,300,"July,August,September",4,3,200,villa,8,yes,16:00,10:00,7,100,500
+104,City Center Apartment,Madrid,"wifi,elevator,gym,security",available,180,"June,July,August,September",2,1,75,apartment,4,no,15:00,11:00,2,30,250
+105,Mountain Cabin,Swiss Alps,"wifi,fireplace,ski storage,sauna",available,250,"December,January,February",3,2,120,cabin,6,yes,14:00,10:00,5,50,400
+106,Luxury Penthouse,Paris,"wifi,pool,concierge,rooftop",booked,500,"July,August",3,3,150,penthouse,6,no,16:00,11:00,4,75,1000
+107,Historic Castle,Ireland,"wifi,library,tennis court,stables",available,800,"June,July,August,September",8,6,500,castle,16,yes,15:00,10:00,7,150,2000
+108,Modern Studio,Amsterdam,"wifi,bike storage,coffee maker",available,130,"June,July,August,September",1,1,40,studio,2,no,14:00,11:00,2,25,200
+109,Seaside Cottage,Cornwall,"wifi,BBQ,beach access,fireplace",available,200,"July,August,September",2,1,80,cottage,4,yes,15:00,10:00,3,40,300
+110,Urban Loft,New York,"wifi,elevator,rooftop,doorman",booked,400,"June,July,August",2,2,100,loft,4,no,15:00,11:00,3,50,500 
