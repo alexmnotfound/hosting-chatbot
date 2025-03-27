@@ -10,9 +10,9 @@ from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
 from langchain_community.callbacks import get_openai_callback
 
-from .config import settings
-from .data_loader import PropertyDataLoader
-from .memory import ConversationMemory
+from src.config import settings
+from src.data_loader import PropertyDataLoader
+from src.memory import ConversationMemory
 
 class PropertyChatbot:
     def __init__(self):
@@ -122,8 +122,8 @@ class PropertyChatbot:
         
         try:
             with get_openai_callback() as cb:
-                summary = self.llm.predict(summary_prompt)
-                self.memory.update_summary(summary)
+                summary = self.llm.invoke(summary_prompt)
+                self.memory.update_summary(summary.content)
         except Exception as e:
             print(f"Warning: Could not summarize conversation: {str(e)}")
 

@@ -17,9 +17,12 @@ COPY . .
 # Create data directory if it doesn't exist
 RUN mkdir -p data
 
+# Install the package in development mode
+RUN pip install -e .
+
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
 
 # Run the application
-CMD ["python", "src/chatbot.py"] 
+CMD ["python", "-m", "src.chatbot"] 
