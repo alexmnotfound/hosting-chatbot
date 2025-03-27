@@ -10,4 +10,6 @@ services:
       - .env
     ports:
       - "8000:8000"  # If we add a web interface later
-    command: python src/chatbot.py 
+    stdin_open: true  # Enable interactive input
+    tty: true        # Enable TTY
+    command: python -u src/chatbot.py  # -u flag for unbuffered output 

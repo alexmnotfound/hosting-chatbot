@@ -23,6 +23,7 @@ RUN pip install -e .
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
+ENV TERM=xterm-256color
 
 # Run the application
-CMD ["python", "-m", "src.chatbot"] 
+CMD ["python", "src/chatbot.py"] 
