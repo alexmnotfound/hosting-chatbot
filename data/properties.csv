@@ -9,3 +9,13 @@ property_id,name,location,amenities,status,price,available_months,number_of_bedr
 108,Modern Studio,Amsterdam,"wifi,bike storage,coffee maker",available,130,"June,July,August,September",1,1,40,studio,2,no,14:00,11:00,2,25,200
 109,Seaside Cottage,Cornwall,"wifi,BBQ,beach access,fireplace",available,200,"July,August,September",2,1,80,cottage,4,yes,15:00,10:00,3,40,300
 110,Urban Loft,New York,"wifi,elevator,rooftop,doorman",booked,400,"June,July,August",2,2,100,loft,4,no,15:00,11:00,3,50,500 
+111,Sunny Flat,Barcelona,"wifi,kitchen,balcony,AC",available,140,"June,July,August,September",2,1,65,apartment,4,yes,15:00,11:00,3,30,250
+112,Rooftop Retreat,Berlin,"wifi,rooftop,workspace,elevator",available,180,"May,June,July",1,1,55,studio,2,no,14:00,10:00,2,25,200
+113,Sea Breeze House,Mallorca,"wifi,pool,beach access,AC",booked,320,"July,August",3,2,150,villa,6,yes,16:00,11:00,5,90,600
+114,Central Loft,Madrid,"wifi,workspace,AC,elevator",available,160,"June,July,August",1,1,50,loft,2,no,15:00,11:00,2,20,150
+115,Ski Chalet,Swiss Alps,"wifi,fireplace,ski access,jacuzzi",available,280,"December,January",4,3,140,chalet,8,yes,14:00,10:00,4,60,450
+116,Eiffel View Studio,Paris,"wifi,balcony,elevator,AC",available,220,"July,August",1,1,48,studio,2,no,16:00,10:00,3,35,300
+117,Garden Cottage,Ireland,"wifi,garden,BBQ,fireplace",available,190,"June,July,August",2,1,85,cottage,4,yes,15:00,11:00,3,40,250
+118,Canal-Side Apartment,Amsterdam,"wifi,view,kitchen,bike storage",booked,170,"July,August,September",2,1,70,apartment,3,no,14:00,10:00,3,30,200
+119,Cliffside Cabin,Cornwall,"wifi,fireplace,BBQ,ocean view",available,210,"July,August",2,1,90,cabin,5,yes,15:00,10:00,4,45,320
+120,Highrise Haven,New York,"wifi,gym,concierge,city view",available,420,"June,July,August",2,2,110,penthouse,5,no,15:00,11:00,3,55,600

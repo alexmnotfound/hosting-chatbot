@@ -52,6 +52,17 @@ class PropertyChatbot:
             Location: {prop['location']}
             Price: ${prop['price']} per night
             Status: {prop['status']}
+            Property Type: {prop['property_type']}
+            Maximum Guests: {prop['max_guests']}
+            Number of Bedrooms: {prop['number_of_bedrooms']}
+            Number of Bathrooms: {prop['number_of_bathrooms']}
+            Square Meters: {prop['square_meters']}
+            Pet Friendly: {prop['pet_friendly']}
+            Check-in Time: {prop['check_in_time']}
+            Check-out Time: {prop['check_out_time']}
+            Minimum Stay: {prop['minimum_stay']} nights
+            Cleaning Fee: ${prop['cleaning_fee']}
+            Security Deposit: ${prop['security_deposit']}
             Amenities: {', '.join(prop['amenities'])}
             Available months: {', '.join(prop['available_months'])}
             """
@@ -68,6 +79,8 @@ class PropertyChatbot:
         """Initialize the LangChain conversation chain."""
         template = """You are a helpful property rental assistant. Use the following pieces of context to answer the question at the end.
         If you don't know the answer, just say that you don't know, don't try to make up an answer.
+        Always check property details like maximum guests, number of bedrooms, and amenities before making recommendations.
+        If a property doesn't meet the user's requirements, explicitly state why and suggest alternatives.
 
         Previous conversation:
         {chat_history}
@@ -115,15 +128,20 @@ class PropertyChatbot:
         conversation_text = "\n".join([f"{msg['role']}: {msg['content']}" for msg in messages])
         
         summary_prompt = f"""
-        Please provide a concise summary of the following conversation, focusing on the key points about the user's preferences and requirements:
-        
+        Please provide a concise summary of the following conversation, focusing on:
+        1. The user's specific requirements (number of guests, location, dates, etc.)
+        2. Any preferences or constraints mentioned
+        3. Any properties that were discussed or recommended
+        4. Any issues or concerns raised about specific properties
+
+        Conversation:
         {conversation_text}
         """
         
         try:
             with get_openai_callback() as cb:
-                summary = self.llm.invoke(summary_prompt)
-                self.memory.update_summary(summary.content)
+                response = self.llm.invoke([{"role": "user", "content": summary_prompt}])
+                self.memory.update_summary(response.content)
         except Exception as e:
             print(f"Warning: Could not summarize conversation: {str(e)}")
 
