@@ -89,8 +89,8 @@ cd hosting-chatbot
 
 2. Create and activate a virtual environment (recommended):
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Unix/macOS
+python3 -m venv myenv
+source myenv/bin/activate  # On Unix/macOS
 # or
 .\venv\Scripts\activate  # On Windows
 ```
@@ -108,9 +108,13 @@ cp .env.example .env
 
 ## 🚀 Running the Chatbot
 
-### Using Docker:
+### Using Docker (Recommended):
 ```bash
-docker-compose up --build
+# Build the container
+docker compose build
+
+# Run the chatbot in interactive mode
+docker compose run --rm chatbot
 ```
 
 ### Using Python directly:
