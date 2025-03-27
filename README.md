@@ -121,10 +121,3 @@ docker compose run --rm chatbot
 ```bash
 python3 -m src.chatbot
 ```
-
-## 🧪 Testing
-
-To run tests (when implemented):
-```bash
-python3 -m pytest tests/
-```
