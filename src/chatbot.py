@@ -1,4 +1,5 @@
 import os
+import json
 from typing import List, Dict, Any
 from datetime import datetime, timedelta
 import time
@@ -36,8 +37,65 @@ class PropertyChatbot:
         self.vector_store = None
         self.chain = None
         self.last_request_time = datetime.now()
+        
+        # Initialize property data first
         self._initialize_vector_store()
-        self._initialize_chain()
+        
+        # Then try to load trained model
+        if self._load_trained_model():
+            print("Loaded trained model successfully!")
+        else:
+            print("No trained model found, initializing with default configuration...")
+            self._initialize_chain()
+
+    def _load_trained_model(self) -> bool:
+        """Load the trained model and vector store if available."""
+        try:
+            # Check if trained model exists
+            if not os.path.exists('models/vector_store') or not os.path.exists('models/chain_config.json'):
+                return False
+            
+            # Load chain configuration
+            with open('models/chain_config.json', 'r') as f:
+                chain_config = json.load(f)
+            
+            # Initialize chain with trained configuration
+            template = """You are a helpful property rental assistant. Use the following pieces of context to answer the question at the end.
+            If you don't know the answer, just say that you don't know, don't try to make up an answer.
+            Always check property details like maximum guests, number of bedrooms, and amenities before making recommendations.
+            If a property doesn't meet the user's requirements, explicitly state why and suggest alternatives.
+
+            Previous conversation:
+            {chat_history}
+
+            Context:
+            {context}
+
+            Question: {question}
+            Answer:"""
+
+            QA_CHAIN_PROMPT = PromptTemplate(
+                input_variables=["context", "question", "chat_history"],
+                template=template
+            )
+
+            memory = ConversationBufferMemory(
+                memory_key="chat_history",
+                return_messages=True
+            )
+
+            self.chain = ConversationalRetrievalChain.from_llm(
+                llm=self.llm,
+                retriever=self.vector_store.as_retriever(),
+                memory=memory,
+                combine_docs_chain_kwargs={"prompt": QA_CHAIN_PROMPT}
+            )
+            
+            return True
+            
+        except Exception as e:
+            print(f"Error loading trained model: {str(e)}")
+            return False
 
     def _initialize_vector_store(self) -> None:
         """Initialize the vector store with property data."""

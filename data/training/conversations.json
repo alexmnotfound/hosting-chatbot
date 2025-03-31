@@ -1,0 +1,94 @@
+{
+    "conversations": [
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "Do you allow pets?"},
+                {"role": "assistant", "content": "Yes, most of our listings are pet-friendly. Please check individual property rules."},
+                {"role": "user", "content": "What are the rules for pets?"},
+                {"role": "assistant", "content": "Our pet policies include:\n- Maximum 2 pets per room\n- Pets must be leashed in common areas\n- Pets are not allowed in the dining area\n- A $25 pet fee per night applies\n- Please inform us about your pet's size and breed when booking"}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "Can I check in early?"},
+                {"role": "assistant", "content": "Early check-in is possible depending on availability. Please contact support before arrival."},
+                {"role": "user", "content": "How early can I check in?"},
+                {"role": "assistant", "content": "Early check-in is available from 12:00 PM onwards, subject to room availability. We recommend requesting early check-in at least 24 hours in advance. If your room isn't ready, you can store your luggage with us and use our facilities while you wait."}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "How do I cancel my booking?"},
+                {"role": "assistant", "content": "To cancel, go to your dashboard, click on the booking, and select 'Cancel Reservation'."},
+                {"role": "user", "content": "What's your cancellation policy?"},
+                {"role": "assistant", "content": "Our cancellation policy is:\n- Free cancellation up to 48 hours before check-in\n- 50% charge for cancellations within 48 hours\n- No refund for no-shows\n- Special rates may have different policies\n\nWould you like me to help you check your specific booking's cancellation terms?"}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "What's the WiFi password?"},
+                {"role": "assistant", "content": "The WiFi password is provided in your check-in instructions. You can find it in your booking confirmation email."},
+                {"role": "user", "content": "I can't find the email. Can you help?"},
+                {"role": "assistant", "content": "Of course! You can find the WiFi information in three places:\n1. Your booking confirmation email\n2. The property's welcome packet in your room\n3. The property's mobile app under 'Guest Services'\n\nIf you still can't find it, I can connect you with our support team who can provide the information directly."}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "Is parking available?"},
+                {"role": "assistant", "content": "Yes, free parking is available on-site for all guests. Please park in the designated guest parking area."},
+                {"role": "user", "content": "Do you have electric vehicle charging?"},
+                {"role": "assistant", "content": "Yes, we have 4 Tesla Superchargers and 2 universal EV charging stations in our parking garage. The charging stations are available on a first-come, first-served basis. There's a small fee for charging based on usage. Would you like me to provide the current rates?"}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "What time is check-out?"},
+                {"role": "assistant", "content": "Check-out time is 11:00 AM. Late check-out may be available upon request."},
+                {"role": "user", "content": "Can I get a late check-out?"},
+                {"role": "assistant", "content": "Late check-out is available based on availability:\n- Until 1:00 PM: Free\n- Until 3:00 PM: $25 fee\n- Until 5:00 PM: $50 fee\n\nPlease request late check-out at least 24 hours before your scheduled check-out time. Would you like me to check availability for your stay?"}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "Is breakfast included?"},
+                {"role": "assistant", "content": "Yes, a complimentary continental breakfast is served daily from 7:00 AM to 10:00 AM in the dining area."},
+                {"role": "user", "content": "What's included in the breakfast?"},
+                {"role": "assistant", "content": "Our continental breakfast includes:\n- Fresh pastries and breads\n- Assorted cereals\n- Fresh fruit\n- Coffee, tea, and juice\n- Yogurt and milk\n\nWe also offer a full hot breakfast buffet for an additional $15 per person, which includes eggs, bacon, sausage, and made-to-order omelets. Would you like to know more about the hot breakfast options?"}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "Where can I find the laundry room?"},
+                {"role": "assistant", "content": "The laundry room is located on the ground floor, next to the elevator. It's available 24/7 for guest use."},
+                {"role": "user", "content": "Do you provide detergent?"},
+                {"role": "assistant", "content": "Yes, we provide complimentary detergent pods and fabric softener in the laundry room. The machines are card-operated and cost $2.00 per wash and $2.00 per dry. You can get a laundry card from the front desk with a $20 deposit that will be refunded when you return the card."}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "Is there a gym?"},
+                {"role": "assistant", "content": "Yes, we have a fitness center open 24/7. It's located on the second floor. Please bring your room key for access."},
+                {"role": "user", "content": "What equipment do you have?"},
+                {"role": "assistant", "content": "Our fitness center includes:\n- 3 treadmills\n- 2 elliptical machines\n- Free weights (5-50 lbs)\n- 2 stationary bikes\n- Yoga mats and stretching area\n- Towels and water fountain\n\nWe also offer complimentary yoga classes Monday, Wednesday, and Friday at 7:00 AM. Would you like me to add you to the class schedule?"}
+            ]
+        },
+        {
+            "messages": [
+                {"role": "system", "content": "You are a helpful chatbot for a property hosting company."},
+                {"role": "user", "content": "How do I request housekeeping?"},
+                {"role": "assistant", "content": "You can request housekeeping through the app or by calling the front desk. Regular service is provided daily between 9 AM and 5 PM."},
+                {"role": "user", "content": "What if I need something outside those hours?"},
+                {"role": "assistant", "content": "For urgent housekeeping needs outside regular hours:\n- Call the front desk (ext. 0)\n- We have on-call staff available 24/7\n- Emergency requests (like spills or maintenance issues) are prioritized\n- Additional towels and amenities can be picked up at the front desk\n\nWould you like me to connect you with the front desk for immediate assistance?"}
+            ]
+        }
+    ]
+} 
